@@ -84,11 +84,13 @@ Ensure MySQL is running, and update the DB connection in init_db.py if needed.
 ## 5. Load Data into MySQL
 
 python init_db.py
+
 This loads your Excel files into MySQL tables.
 
 ## ▶️ Run the API Server
 
 uvicorn main:app --reload
+
 Access Swagger UI at:
 http://127.0.0.1:8000/docs
 
@@ -190,11 +192,6 @@ Pandas
   - `.gitignore` to ignore `.env`, `/env`, etc.
   - The GitHub URL if you’ve already pushed this
 
-Let me know if you want help with:
-
-- Creating a `LICENSE`
-- Adding a badge for Gemini or FastAPI
-- Deploying on Render/Vercel/EC2
 
 All set for GitHub now! ✅
 

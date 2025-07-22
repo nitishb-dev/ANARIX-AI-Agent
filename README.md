@@ -29,38 +29,28 @@ Supports `SELECT`, `INSERT`, `UPDATE`, and `DELETE` operations via natural langu
 
 ---
 
-## 🗂️ Project Structure
+## 📦 Project Structure
 
-ANARIX-AI-AGENT/
-│
-├── __pycache__/             # Python bytecode cache
-├── datasets/                # Contains initial Excel data files
-│   ├── Product-Level Ad Sales and Metrics.xlsx
-│   ├── Product-Level Eligibility Table (master).xlsx
-│   └── Product-Level Total Sales and Metrics.xlsx
-├── db/                      # Database configuration and models
-│   ├── __pycache__/
-│   ├── models.py            # Defines SQLAlchemy database models
-│   └── session.py           # Handles database session management
-├── env/                     # Python virtual environment
-│   ├── Include/
-│   ├── Lib/
-│   ├── Scripts/
-│   └── share/
-│   └── pyvenv.cfg
-├── llm/                     # Large Language Model integration
-│   ├── __pycache__/
-│   └── agent.py             # Core logic for Gemini interaction and SQL generation
-├── .env                     # Stores sensitive environment variables (e.g., API keys)
-├── .gitignore               # Specifies files and directories to be ignored by Git
-├── chech.py                 # (Utility/test script - consider renaming for clarity, e.g., `utils.py`)
-├── cmds.txt                 # (Text file possibly containing command examples or notes)
-├── init_db.py               # Script to initialize the MySQL database and load initial data
-├── main.py                  # Main FastAPI application entry point, exposes API endpoints
-├── README.md                # This project README file
-├── requirements.txt         # Python dependencies for the project
-└── TASK DESCRIPTION.md      # Detailed description of project tasks or requirements
+📂ANARIX-AI-AGENT  
+  ├── 📂__pycache__  
+  ├── 📂datasets  
+  │   └── 📄(Excel files or raw datasets)  
+  ├── 📂db  
+  │   └── 📄(MySQL config or helpers)  
+  ├── 📂env *(excluded by .gitignore)*  
+  ├── 📂llm  
+  │   └── 📄agent.py *(Gemini + SQL + chart logic)*  
+  ├── 📄.env *(holds GEMINI_API_KEY)*  
+  ├── 📄.gitignore *(ignores env/, __pycache__/, .env etc.)*  
+  ├── 📄api_check.py *(api testing script)*  
+  ├── 📄cmds.txt *(CLI commands or experiment log)*  
+  ├── 📄init_db.py *(script to populate MySQL from Excel)*  
+  ├── 📄main.py *(FastAPI entry point with `/ask` endpoint)*  
+  ├── 📄requirements.txt *(all required pip packages)*  
+  ├── 📄TASK DESCRIPTION.md *(provided use-case or brief)*  
+  └── 📄README.md *(project documentation you're reading)*
 
+---
 
 ## 1. Create a Virtual Environment
 
@@ -76,6 +66,7 @@ pip install -r requirements.txt
 Create a .env file:
 
 GEMINI_API_KEY=your_gemini_api_key_here
+
 Get your key from: https://makersuite.google.com/app/apikey
 
 ## 4. Configure MySQL DB

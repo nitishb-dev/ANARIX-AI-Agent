@@ -33,34 +33,33 @@ Supports `SELECT`, `INSERT`, `UPDATE`, and `DELETE` operations via natural langu
 
 ANARIX-AI-AGENT/
 │
-├── __pycache__/             # Python bytecode cache
-├── datasets/                # Contains initial Excel data files
-│   ├── Product-Level Ad Sales and Metrics.xlsx
-│   ├── Product-Level Eligibility Table (master).xlsx
-│   └── Product-Level Total Sales and Metrics.xlsx
-├── db/                      # Database configuration and models
-│   ├── __pycache__/
-│   ├── models.py            # Defines SQLAlchemy database models
-│   └── session.py           # Handles database session management
-├── env/                     # Python virtual environment
-│   ├── Include/
-│   ├── Lib/
-│   ├── Scripts/
-│   └── share/
-│   └── pyvenv.cfg
-├── llm/                     # Large Language Model integration
-│   ├── __pycache__/
-│   └── agent.py             # Core logic for Gemini interaction and SQL generation
-├── .env                     # Stores sensitive environment variables (e.g., API keys)
-├── .gitignore               # Specifies files and directories to be ignored by Git
-├── chech.py                 # (Utility/test script - consider renaming for clarity, e.g., `utils.py`)
-├── cmds.txt                 # (Text file possibly containing command examples or notes)
-├── init_db.py               # Script to initialize the MySQL database and load initial data
-├── main.py                  # Main FastAPI application entry point, exposes API endpoints
-├── README.md                # This project README file
-├── requirements.txt         # Python dependencies for the project
-└── TASK DESCRIPTION.md      # Detailed description of project tasks or requirements
-
+├── **pycache**/ # Python bytecode cache
+├── datasets/ # Contains initial Excel data files
+│ ├── Product-Level Ad Sales and Metrics.xlsx
+│ ├── Product-Level Eligibility Table (master).xlsx
+│ └── Product-Level Total Sales and Metrics.xlsx
+├── db/ # Database configuration and models
+│ ├── **pycache**/
+│ ├── models.py # Defines SQLAlchemy database models
+│ └── session.py # Handles database session management
+├── env/ # Python virtual environment
+│ ├── Include/
+│ ├── Lib/
+│ ├── Scripts/
+│ └── share/
+│ └── pyvenv.cfg
+├── llm/ # Large Language Model integration
+│ ├── **pycache**/
+│ └── agent.py # Core logic for Gemini interaction and SQL generation
+├── .env # Stores sensitive environment variables (e.g., API keys)
+├── .gitignore # Specifies files and directories to be ignored by Git
+├── chech.py # (Utility/test script - consider renaming for clarity, e.g., `utils.py`)
+├── cmds.txt # (Text file possibly containing command examples or notes)
+├── init_db.py # Script to initialize the MySQL database and load initial data
+├── main.py # Main FastAPI application entry point, exposes API endpoints
+├── README.md # This project README file
+├── requirements.txt # Python dependencies for the project
+└── TASK DESCRIPTION.md # Detailed description of project tasks or requirements
 
 ## 1. Create a Virtual Environment
 
@@ -73,12 +72,14 @@ source env/bin/activate # Linux/macOS
 pip install -r requirements.txt
 
 ## 3. Add Your Gemini API Key
+
 Create a .env file:
 
 GEMINI_API_KEY=your_gemini_api_key_here
 Get your key from: https://makersuite.google.com/app/apikey
 
 ## 4. Configure MySQL DB
+
 Ensure MySQL is running, and update the DB connection in init_db.py if needed.
 
 ## 5. Load Data into MySQL
@@ -93,6 +94,7 @@ Access Swagger UI at:
 http://127.0.0.1:8000/docs
 
 ## 💬 Example Questions
+
 📊 Data Queries
 "What is the total ad spend?"
 
@@ -165,10 +167,10 @@ Error-handling and Gemini fallback are supported
 
 ## 📷 Screenshots
 
-
 ---
 
 ## 🙌 Credits
+
 FastAPI
 
 Google Gemini
@@ -179,7 +181,6 @@ Matplotlib
 
 Pandas
 
-
 ---
 
 ### ✅ Notes:
@@ -189,14 +190,3 @@ Pandas
   - `screenshots/` folder with real images
   - `.gitignore` to ignore `.env`, `/env`, etc.
   - The GitHub URL if you’ve already pushed this
-
-Let me know if you want help with:
-
-- Creating a `LICENSE`
-- Adding a badge for Gemini or FastAPI
-- Deploying on Render/Vercel/EC2
-
-All set for GitHub now! ✅
-
-Ask ChatGPT
-

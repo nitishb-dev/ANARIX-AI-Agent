@@ -2,6 +2,9 @@ python -m venv env
 source env/Scripts/activate       
 
 
+uvicorn main:app --reload
+
+
 Questions:
 
 1.	What is my total sales?

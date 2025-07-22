@@ -175,16 +175,3 @@ Pandas
 
 ---
 
-### ✅ Notes:
-
-- Place this in `README.md`
-- You can optionally update:
-  - `screenshots/` folder with real images
-  - `.gitignore` to ignore `.env`, `/env`, etc.
-  - The GitHub URL if you’ve already pushed this
-
-
-All set for GitHub now! ✅
-
-Ask ChatGPT
-

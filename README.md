@@ -33,13 +33,13 @@ This ANARIX AI Agent provides a powerful and intuitive way to interact with your
  │ └── 📄agent.py _(Gemini + SQL + chart logic)_  
  ├── 📄.env _(holds GEMINI_API_KEY)_  
  ├── 📄.gitignore _(ignores env/, **pycache**/, .env etc.)_  
- ├── 📄api_check.py _(api testing script)_  
+ ├── 📄api*check.py *(api testing script)_  
  ├── 📄cmds.txt _(CLI commands or experiment log)_  
  ├── 📄init_db.py _(script to populate MySQL from Excel)_  
  ├── 📄main.py _(FastAPI entry point with `/ask` endpoint)_  
  ├── 📄requirements.txt _(all required pip packages)_  
  ├── 📄TASK DESCRIPTION.md _(provided use-case or brief)_  
- └── 📄README.md _(project documentation you're reading)_
+ └── 📄README.md _(project documentation you're reading)\_
 
 ---
 
@@ -154,9 +154,13 @@ Error-handling and Gemini fallback are supported
 
 <div align="center">
 
+<h1>Swagger UI<h1>
+
   <img src="https://github.com/user-attachments/assets/e60e9244-4c1e-4ccb-b8a9-ebf07ef6f48f" alt="SQL Output Screenshot" width="1000" style="margin: 10px 0;" />
 
   <img src="https://github.com/user-attachments/assets/6f09ef1c-be57-4499-9613-85dfd6d6b420" alt="Chart Screenshot" width="986" style="margin: 10px 0;" />
+
+  <h1>Terminal Output<h1>
 
   <img src="https://github.com/user-attachments/assets/d4ec6398-87d2-4194-b4c6-1f2d28666494" alt="Postman Screenshot" width="970" style="margin: 10px 0;" />
 

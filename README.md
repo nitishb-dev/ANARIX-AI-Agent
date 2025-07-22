@@ -1,0 +1,191 @@
+# 🧠 ANARIX AI Agent (FastAPI + Gemini + MySQL)
+
+---
+
+## 🚀 Project Overview
+
+This project focuses on building an AI agent designed to answer e-commerce data questions. The agent is capable of interpreting natural language questions, generating and executing SQL queries on provided datasets, and responding with accurate answers.
+
+---
+
+## 🚀 Features
+
+This ANARIX AI Agent provides a powerful and intuitive way to interact with your e-commerce data:
+
+- Natural Language Querying: The AI agent can understand and answer any question related to the provided e-commerce data.
+
+- API-Driven Interaction: Questions are received via API endpoints, and the agent processes them to return accurate responses.
+
+- SQL Conversion & Execution: The agent includes logic to convert natural language questions into SQL queries, fetch answers from the database, and return them in a human-readable format.
+
+---
+
+## 📦 Project Structure
+
+📂ANARIX-AI-AGENT  
+ ├── 📂**pycache**  
+ ├── 📂datasets  
+ │ └── 📄(Excel files or raw datasets)  
+ ├── 📂db  
+ │ └── 📄(MySQL config or helpers)  
+ ├── 📂env _(excluded by .gitignore)_  
+ ├── 📂llm  
+ │ └── 📄agent.py _(Gemini + SQL + chart logic)_  
+ ├── 📄.env _(holds GEMINI_API_KEY)_  
+ ├── 📄.gitignore _(ignores env/, **pycache**/, .env etc.)_  
+ ├── 📄api_check.py _(api testing script)_  
+ ├── 📄cmds.txt _(CLI commands or experiment log)_  
+ ├── 📄init_db.py _(script to populate MySQL from Excel)_  
+ ├── 📄main.py _(FastAPI entry point with `/ask` endpoint)_  
+ ├── 📄requirements.txt _(all required pip packages)_  
+ ├── 📄TASK DESCRIPTION.md _(provided use-case or brief)_  
+ └── 📄README.md _(project documentation you're reading)_
+
+---
+
+## 1. Create a Virtual Environment
+
+python -m venv env
+source env/bin/activate # Linux/macOS
+.\env\Scripts\activate # Windows
+
+## 2. Install Dependencies
+
+pip install -r requirements.txt
+
+## 3. Add Your Gemini API Key
+
+Create a .env file:
+
+GEMINI_API_KEY=your_gemini_api_key_here
+
+Get your key from: https://makersuite.google.com/app/apikey
+
+## 4. Configure MySQL DB
+
+Ensure MySQL is running, and update the DB connection in init_db.py if needed.
+
+## 5. Load Data into MySQL
+
+python init_db.py
+
+This loads your Excel files into MySQL tables.
+
+## ▶️ Run the API Server
+
+uvicorn main:app --reload
+
+Access Swagger UI at:
+http://127.0.0.1:8000/docs
+
+## 💬 Example Questions
+
+📊 Data Queries
+"What is the total ad spend?"
+
+"How many clicks did item 101 get?"
+
+"Show me all metrics for item 21"
+
+📈 Business Metrics
+"What is the Return on Ad Spend (RoAS)?"
+
+"Which item had the highest CPC?"
+
+📊 Chart Requests
+"Generate a pie chart of sales by item"
+
+"Show a bar chart of revenue per product"
+
+🛠️ Data Updates
+"Insert a new item into sales_metrics"
+
+"Update ad spend for item 32"
+
+"Delete entry where item_id is 99"
+
+---
+
+## 📦 Requirements
+
+Python 3.8+
+
+FastAPI
+
+SQLAlchemy
+
+pandas
+
+matplotlib
+
+python-dotenv
+
+sse-starlette
+
+MySQL (local or hosted)
+
+Google Generative AI client (google-generativeai)
+
+---
+
+## 🧠 How It Works
+
+User Input — Ask a question at the /ask API endpoint.
+
+Gemini Processing — Generates a SQL query or chart instruction.
+
+SQL Execution — FastAPI runs the SQL on the connected MySQL database.
+
+Chart (Optional) — If requested, Matplotlib opens a popup with a chart.
+
+---
+
+## 📌 Notes
+
+.env is excluded by .gitignore for security
+
+Matplotlib is used to pop up chart windows (no frontend)
+
+Error-handling and Gemini fallback are supported
+
+---
+
+## 📷 Screenshots
+
+<div align="center">
+
+  <img src="https://github.com/user-attachments/assets/e60e9244-4c1e-4ccb-b8a9-ebf07ef6f48f" alt="SQL Output Screenshot" width="1000" style="margin: 10px 0;" />
+
+  <img src="https://github.com/user-attachments/assets/6f09ef1c-be57-4499-9613-85dfd6d6b420" alt="Chart Screenshot" width="986" style="margin: 10px 0;" />
+
+  <img src="https://github.com/user-attachments/assets/d4ec6398-87d2-4194-b4c6-1f2d28666494" alt="Postman Screenshot" width="970" style="margin: 10px 0;" />
+
+</div>
+
+---
+
+## 🙌 Credits
+
+FastAPI
+
+Google Gemini
+
+SQLAlchemy
+
+Matplotlib
+
+Pandas
+
+---
+
+## 🙋‍♂️ Author
+
+**Nitish B**  
+Final Year Student | Software Developer & AI Enthusiast  
+📫 [GitHub](https://github.com/nitishb-dev) • [LinkedIn](https://www.linkedin.com/in/nitishb-dev)
+
+---
+
+### ⭐️ Star the Repository
+
+If you found this project helpful, consider starring ⭐ it on GitHub to support future development!

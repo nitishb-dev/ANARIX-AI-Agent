@@ -3,4 +3,4 @@ __pycache__/
 *.pyc
 env/
 
-api_check.py
+*api_check.py

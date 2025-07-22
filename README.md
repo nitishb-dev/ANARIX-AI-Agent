@@ -1,8 +1,10 @@
 # 🧠 ANARIX AI Agent (FastAPI + Gemini + MySQL)
 
-An intelligent AI-powered agent designed to interpret natural language questions, automatically generate SQL queries, execute them on a MySQL database, and optionally display visualizations — all through a user-friendly FastAPI interface.
+---
 
-It leverages **Google Gemini** (via Generative AI API) for robust natural language understanding and **Matplotlib** for insightful data visualizations on your e-commerce sales, ads, and eligibility metrics.
+## 🚀 Project Overview
+
+This project focuses on building an AI agent designed to answer e-commerce data questions. The agent is capable of interpreting natural language questions, generating and executing SQL queries on provided datasets, and responding with accurate answers.
 
 ---
 
@@ -10,22 +12,14 @@ It leverages **Google Gemini** (via Generative AI API) for robust natural langua
 
 This ANARIX AI Agent provides a powerful and intuitive way to interact with your e-commerce data:
 
-✅ **Natural Language Interaction**  
-Ask questions in plain English, such as:
 
-- "What is the total ad spend?"
-- "Which item had the highest CPC?"
-- "Generate a pie chart of sales by item"
-- "Insert a new entry into sales_metrics table"
+- Natural Language Querying: The AI agent can understand and answer any question related to the provided e-commerce data.
 
-✅ **Automated SQL Generation & Execution**  
-Automatically understands your natural language queries, generates the correct SQL, and executes it against your MySQL database.
 
-✅ **Direct Answers & Visualizations**  
-Displays query results directly or provides clear answers. It can also plot bar or pie charts using Matplotlib for visual data analysis.
+- API-Driven Interaction: Questions are received via API endpoints, and the agent processes them to return accurate responses.
 
-✅ **Data Manipulation**  
-Supports `SELECT`, `INSERT`, `UPDATE`, and `DELETE` operations via natural language.
+
+- SQL Conversion & Execution: The agent includes logic to convert natural language questions into SQL queries, fetch answers from the database, and return them in a human-readable format.
 
 ---
 

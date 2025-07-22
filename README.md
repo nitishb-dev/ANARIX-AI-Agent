@@ -32,61 +32,67 @@ Supports `SELECT`, `INSERT`, `UPDATE`, and `DELETE` operations via natural langu
 ## 🗂️ Project Structure
 
 ANARIX-AI-AGENT/
-├── pycache/ # Python bytecode
-├── datasets/ # Excel files or raw data
-├── db/ # MySQL configuration/helpers
-├── env/ # Virtual environment (excluded by .gitignore)
-├── llm/ # LLM/Gemini-related logic
-├── .env # Contains Gemini API Key
-├── .gitignore # Ignore env, pycache, .env, etc.
-├── chech.py # Misc/utility script
-├── cmds.txt # Notes or command history
-├── init_db.py # Populates MySQL DB from Excel
-├── main.py # FastAPI entry point
-├── requirements.txt # Python dependencies
-├── TASK DESCRIPTION.md # Original assignment or scope
-└── README.md # 📄 This file
+│
+├── __pycache__/             # Python bytecode cache
+├── datasets/                # Contains initial Excel data files
+│   ├── Product-Level Ad Sales and Metrics.xlsx
+│   ├── Product-Level Eligibility Table (master).xlsx
+│   └── Product-Level Total Sales and Metrics.xlsx
+├── db/                      # Database configuration and models
+│   ├── __pycache__/
+│   ├── models.py            # Defines SQLAlchemy database models
+│   └── session.py           # Handles database session management
+├── env/                     # Python virtual environment
+│   ├── Include/
+│   ├── Lib/
+│   ├── Scripts/
+│   └── share/
+│   └── pyvenv.cfg
+├── llm/                     # Large Language Model integration
+│   ├── __pycache__/
+│   └── agent.py             # Core logic for Gemini interaction and SQL generation
+├── .env                     # Stores sensitive environment variables (e.g., API keys)
+├── .gitignore               # Specifies files and directories to be ignored by Git
+├── chech.py                 # (Utility/test script - consider renaming for clarity, e.g., `utils.py`)
+├── cmds.txt                 # (Text file possibly containing command examples or notes)
+├── init_db.py               # Script to initialize the MySQL database and load initial data
+├── main.py                  # Main FastAPI application entry point, exposes API endpoints
+├── README.md                # This project README file
+├── requirements.txt         # Python dependencies for the project
+└── TASK DESCRIPTION.md      # Detailed description of project tasks or requirements
 
-✅ 2. Create a Virtual Environment
-bash
-Copy
-Edit
+
+## 1. Create a Virtual Environment
+
 python -m venv env
 source env/bin/activate # Linux/macOS
 .\env\Scripts\activate # Windows
-✅ 3. Install Dependencies
-bash
-Copy
-Edit
+
+## 2. Install Dependencies
+
 pip install -r requirements.txt
-✅ 4. Add Your Gemini API Key
+
+## 3. Add Your Gemini API Key
 Create a .env file:
 
-env
-Copy
-Edit
 GEMINI_API_KEY=your_gemini_api_key_here
 Get your key from: https://makersuite.google.com/app/apikey
 
-✅ 5. Configure MySQL DB
+## 4. Configure MySQL DB
 Ensure MySQL is running, and update the DB connection in init_db.py if needed.
 
-✅ 6. Load Data into MySQL
-bash
-Copy
-Edit
+## 5. Load Data into MySQL
+
 python init_db.py
 This loads your Excel files into MySQL tables.
 
-▶️ Run the API Server
-bash
-Copy
-Edit
+## ▶️ Run the API Server
+
 uvicorn main:app --reload
 Access Swagger UI at:
 http://127.0.0.1:8000/docs
 
-💬 Example Questions
+## 💬 Example Questions
 📊 Data Queries
 "What is the total ad spend?"
 
@@ -111,7 +117,10 @@ http://127.0.0.1:8000/docs
 
 "Delete entry where item_id is 99"
 
-📦 Requirements
+---
+
+## 📦 Requirements
+
 Python 3.8+
 
 FastAPI
@@ -130,7 +139,10 @@ MySQL (local or hosted)
 
 Google Generative AI client (google-generativeai)
 
-🧠 How It Works
+---
+
+## 🧠 How It Works
+
 User Input — Ask a question at the /ask API endpoint.
 
 Gemini Processing — Generates a SQL query or chart instruction.
@@ -139,19 +151,24 @@ SQL Execution — FastAPI runs the SQL on the connected MySQL database.
 
 Chart (Optional) — If requested, Matplotlib opens a popup with a chart.
 
-📌 Notes
+---
+
+## 📌 Notes
+
 .env is excluded by .gitignore for security
 
 Matplotlib is used to pop up chart windows (no frontend)
 
 Error-handling and Gemini fallback are supported
 
-📷 Screenshots
-(Optional — Add these)
+---
 
-SQL Query Chart Example
+## 📷 Screenshots
 
-🙌 Credits
+
+---
+
+## 🙌 Credits
 FastAPI
 
 Google Gemini
@@ -162,12 +179,6 @@ Matplotlib
 
 Pandas
 
-📬 License
-This project is licensed under the MIT License.
-
-markdown
-Copy
-Edit
 
 ---
 
@@ -188,3 +199,4 @@ Let me know if you want help with:
 All set for GitHub now! ✅
 
 Ask ChatGPT
+

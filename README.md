@@ -185,3 +185,14 @@ Pandas
 
 ---
 
+## 🙋‍♂️ Author
+
+**Nitish B**  
+Final Year Student | Software Developer & AI Enthusiast  
+📫 [GitHub](https://github.com/nitishb-dev) • [LinkedIn](https://www.linkedin.com/in/nitishb-dev)
+
+---
+
+### ⭐️ Star the Repository
+If you found this project helpful, consider starring ⭐ it on GitHub to support future development!
+

@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+sqlalchemy
+pandas
+python-dotenv
+matplotlib
+tabulate
+mysql-connector-python
+google-generativeai

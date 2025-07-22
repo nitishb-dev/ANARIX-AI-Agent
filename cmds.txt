@@ -1,0 +1,18 @@
+python -m venv env
+source env/Scripts/activate       
+
+
+Questions:
+
+1.	What is my total sales?
+
+2.	Calculate the RoAS (Return on Ad Spend).
+
+3.	Which product had the highest CPC (Cost Per Click)?
+
+
+What is the total sales value?
+How many clicks did product 101 get?	
+Show me all details for item 21	
+Which product had the highest ad sales?	
+Show me the top 5 products by revenue

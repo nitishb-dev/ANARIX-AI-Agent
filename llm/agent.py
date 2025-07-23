@@ -37,7 +37,7 @@ If the question mentions chart, bar chart, pie chart, or plot, always return a S
     except Exception as e:
         return {"raw": f"-- Gemini Error: {e}"}
 
-def infer_chart_type(df: pd.DataFrame) -> str or None:
+def infer_chart_type(df: pd.DataFrame) -> str or None:  # type: ignore
     if df.empty or len(df.columns) < 2:
         return None
     if pd.api.types.is_numeric_dtype(df[df.columns[1]]):

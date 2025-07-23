@@ -109,10 +109,6 @@ http://127.0.0.1:8000/docs
 "Show a bar chart of revenue per product"
 
 🛠️ Data Updates
-"Insert a new item into sales_metrics"
-
-"Update ad spend for item 32"
-
 "Delete entry where item_id is 99"
 
 ---

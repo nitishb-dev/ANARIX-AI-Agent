@@ -57,8 +57,8 @@ This ANARIX AI Agent provides a powerful and intuitive way to interact with your
 ## 1. Create a Virtual Environment
 
 python -m venv env
-source env/bin/activate # Linux/macOS
-.\env\Scripts\activate # Windows
+
+source env/Scripts/activate #bash
 
 ## 2. Install Dependencies
 

@@ -193,7 +193,7 @@ Error-handling and Gemini fallback are supported
 
   <h2>Swagger UI(/docs)<h2>
 
-  <img src="https://github.com/user-attachments/assets/e60e9244-4c1e-4ccb-b8a9-ebf07ef6f48f" alt="SQL Output Screenshot" width="1000" style="margin: 10px 0;" />
+  <img src="https://github.com/user-attachments/assets/e60e9244-4c1e-4ccb-b8a9-ebf07ef6f48f" alt="SQL Output Screenshot" width="1002" style="margin: 10px 0;" />
 
   <img src="https://github.com/user-attachments/assets/6f09ef1c-be57-4499-9613-85dfd6d6b420" alt="Chart Screenshot" width="986" style="margin: 10px 0;" />
 

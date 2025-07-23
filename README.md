@@ -184,7 +184,11 @@ Error-handling and Gemini fallback are supported
 
 <div align="center">
 
-<h2>Swagger UI(/docs)<h2>
+   <h2>DB & Tables in MySQL</h2>
+
+   <img width="133" height="80" alt="Screenshot 2025-07-22 195118" src="https://github.com/user-attachments/assets/f492428c-e86b-448b-bf4d-131f10889185" />
+
+  <h2>Swagger UI(/docs)<h2>
 
   <img src="https://github.com/user-attachments/assets/e60e9244-4c1e-4ccb-b8a9-ebf07ef6f48f" alt="SQL Output Screenshot" width="1000" style="margin: 10px 0;" />
 
@@ -198,9 +202,6 @@ Error-handling and Gemini fallback are supported
 
   <img src="https://github.com/user-attachments/assets/d4ec6398-87d2-4194-b4c6-1f2d28666494" alt="Postman Screenshot" width="970" style="margin: 10px 0;" />
 
-  <h2>DB & Tables in MySQL</h2>
-
-  <img width="133" height="80" alt="Screenshot 2025-07-22 195118" src="https://github.com/user-attachments/assets/f492428c-e86b-448b-bf4d-131f10889185" />
 
   <h2>MySQL Output</h2>
   <img width="1533" height="645" alt="image" src="https://github.com/user-attachments/assets/ab5d4d1c-dba9-4876-b76c-26268e0ce5d2" />

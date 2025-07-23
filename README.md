@@ -46,7 +46,6 @@ This ANARIX AI Agent provides a powerful and intuitive way to interact with your
  │ └── 📄agent.py _(Gemini + SQL + chart logic)_  
  ├── 📄.env _(holds GEMINI_API_KEY)_  
  ├── 📄.gitignore _(ignores env(virtual environment)/, pycache/, .env, api_check.py, cmds.txt.)_    
- ├── 📄init_db.py _(script to populate MySQL from Excel)_  
  ├── 📄main.py _(FastAPI entry point with `/ask` endpoint)_  
  ├── 📄requirements.txt _(all required pip packages)_  
  ├── 📄TASK DESCRIPTION.md _(provided use-case or brief)_  
@@ -56,37 +55,43 @@ This ANARIX AI Agent provides a powerful and intuitive way to interact with your
 
 ## 1. Create a Virtual Environment
 
+```python
 python -m venv env
 
-source env/Scripts/activate #bash
+source env/Scripts/activate   
+```
 
 ## 2. Install Dependencies
 
+```python
 pip install -r requirements.txt
+```
 
 ## 3. Add Your Gemini API Key
 
 Create a .env file:
 
+```python
 GEMINI_API_KEY=your_gemini_api_key_here
+```
 
 Get your key from: https://makersuite.google.com/app/apikey
 
 ## 4. Configure MySQL DB
 
-Ensure MySQL is running, and update the DB connection in init_db.py if needed.
+Ensure MySQL is running, and update the DB connection in `db/session.py` if needed:
 
+```python
 DATABASE_URL = f"mysql+mysqlconnector://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+```
 
-## 5. Load Data into MySQL
+Make sure your database and tables are already created and populated.
 
-python init_db.py
+## 5. Run the API Server
 
-This loads your Excel files into MySQL tables.
-
-## ▶️ Run the API Server
-
+```python
 uvicorn main:app --reload
+```
 
 Access Swagger UI at:
 http://127.0.0.1:8000/docs

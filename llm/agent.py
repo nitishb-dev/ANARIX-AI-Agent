@@ -55,17 +55,35 @@ def generate_chart_from_dataframe(df: pd.DataFrame, chart_type: str = "bar", cha
         x_col = df.columns[0]
         y_col = df.columns[1]
         df_sorted = df.sort_values(by=y_col, ascending=False)
-        top_n = 20  # Show only top 20 items for clarity
+        top_n = 20
         df_plot = df_sorted.head(top_n)
         plt.figure(figsize=(12, 6))
-        bars = plt.bar(df_plot[x_col].astype(str), df_plot[y_col], color='#4A90E2', edgecolor='black')
+        colors = ['#4A90E2' if v >= 0 else '#D0021B' for v in df_plot[y_col]]
+
+        # Determine axis units
+        all_negative = (df_plot[y_col] < 0).all()
+        all_positive = (df_plot[y_col] > 0).all()
+
+        # Plot actual values
+        bars = plt.bar(df_plot[x_col].astype(str), df_plot[y_col], color=colors, edgecolor='black')
         plt.title(f"Bar Chart of {y_col} by {x_col}", fontsize=14)
         plt.xlabel(x_col, fontsize=12)
         plt.ylabel(y_col, fontsize=12)
         plt.xticks(rotation=45, fontsize=10)
-        # Add value labels above each bar
+
+        # Set y-axis units
+        if all_negative:
+            plt.ylim(min(df_plot[y_col]) * 1.2, 0)
+        elif all_positive:
+            plt.ylim(0, max(df_plot[y_col]) * 1.2)
+        # else: mixed, use default
+
+        # Value labels above/below bars
         for bar, value in zip(bars, df_plot[y_col]):
-            plt.text(bar.get_x() + bar.get_width()/2, value, f"{value:,.0f}", ha='center', va='bottom', fontsize=9, color='black')
+            if value >= 0:
+                plt.text(bar.get_x() + bar.get_width()/2, value, f"{value:,.0f}", ha='center', va='bottom', fontsize=9, color='black')
+            else:
+                plt.text(bar.get_x() + bar.get_width()/2, value, f"{value:,.0f}", ha='center', va='top', fontsize=9, color='black')
         plt.tight_layout()
         plt.savefig(chart_path)
         return chart_path

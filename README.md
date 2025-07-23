@@ -76,6 +76,8 @@ Get your key from: https://makersuite.google.com/app/apikey
 
 Ensure MySQL is running, and update the DB connection in init_db.py if needed.
 
+DATABASE_URL = f"mysql+mysqlconnector://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+
 ## 5. Load Data into MySQL
 
 python init_db.py
